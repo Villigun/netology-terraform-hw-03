@@ -12,3 +12,4 @@ output "ansible_inventory" {
   value       = local.inventory_content
   sensitive   = false
 }
+

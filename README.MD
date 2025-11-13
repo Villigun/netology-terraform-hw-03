@@ -40,9 +40,9 @@ variable "each_vm" {
 
 #### Решение
 
-1.  Создаем [count-vm.tf](!!!)  
-2.  Создаем [for_each-vm.tf](!!!)  
-В [variables.tf](!!!) добавляем переменные  
+1.  Создаем [count-vm.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/count-vm.tf)  
+2.  Создаем [for_each-vm.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/for_each-vm.tf)  
+В [variables.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/variables.tf) добавляем переменные  
 
 ```
 variable "vm-web_resources" {
@@ -69,7 +69,7 @@ locals {
 }
 ```
 
-В [terraform.tfvars](!!!) также добавляем переменные  
+В [terraform.tfvars](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/terraform.tfvars) также добавляем переменные  
 
 ```
 vm-web_resources = {
@@ -131,7 +131,7 @@ vm-backend_resources = [
 
 где var.ssh-key_path описан в variables.tf, а значение берет из personal.auto.tfvars
 
-6.  Еще добавим [outputs.tf](!!!), чтобы видеть внешние IP адреса.  
+6.  Еще добавим [outputs.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/outputs.tf), чтобы видеть внешние IP адреса.  
     Результат:
     
 ```
@@ -158,7 +158,7 @@ all_vm_public_ips = {
 
 #### Решение
 
-Конфигурация в [disk_vm.tf](!!!)
+Конфигурация в [disk_vm.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/disk_vm.tf)
 
 ```
 terraform apply -auto-approve
@@ -219,7 +219,7 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 
 #### Решение
 
-Создаем [ansible.tf](!!!) и [ansible.tftpl], правим [outputs.tf](!!!)
+Создаем [ansible.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/ansible.tf) и [ansible.tftpl](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/ansible.tftpl), правим [outputs.tf](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/outputs.tf)
 
 ```
 terraform apply -auto-approve
@@ -254,7 +254,7 @@ vms_public_ips = {
 }
 ```
 
-Ссылка на [inventory_backup.ini](!!!)
+Ссылка на [inventory_backup.ini](https://github.com/Villigun/netology-terraform-hw-03/blob/master/terraform/inventory_backup.ini)
 
 
 
